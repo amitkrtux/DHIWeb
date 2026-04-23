@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary:    #0a0a0f;
+    --bg-secondary:  #0f0f18;
+    --bg-card:       #151522;
+    --bg-border:     #1c1c2e;
+    --text-primary:  #f0f0f8;
+    --text-secondary:#a0a0bf;
+    --text-muted:    #565678;
+    --accent:        #1a7d9e;
+    --accent-light:  #2a96b8;
+    --accent-dim:    rgba(26, 125, 158, 0.15);
+  }
+
+  .light {
+    --bg-primary:    #f8f8fc;
+    --bg-secondary:  #f0f0f8;
+    --bg-card:       #ffffff;
+    --bg-border:     #e0e0ef;
+    --text-primary:  #18182a;
+    --text-secondary:#3c3c58;
+    --text-muted:    #787899;
+    --accent:        #136480;
+    --accent-light:  #1a7d9e;
+    --accent-dim:    rgba(19, 100, 128, 0.1);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--accent-dim);
+    color: var(--accent-light);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--bg-border);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+  }
+}
+
+@layer components {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent-light), #90ccdf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--bg-border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-dim);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.625rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-light);
+    box-shadow: 0 0 20px var(--accent-dim);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border-radius: 8px;
+    padding: 0.625rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+    transition: all 0.25s ease;
+    border: 1px solid var(--bg-border);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent-light);
+    box-shadow: 0 0 12px var(--accent-dim);
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+  }
+
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(26, 125, 158, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 125, 158, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glow-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    background: var(--accent-dim);
+    color: var(--accent-light);
+    border: 1px solid rgba(26, 125, 158, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  .tag:hover {
+    background: rgba(26, 125, 158, 0.25);
+    border-color: var(--accent);
+  }
+
+  .form-input {
+    width: 100%;
+    background: var(--bg-secondary);
+    border: 1px solid var(--bg-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    outline: none;
+  }
+
+  .form-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+
+  .form-input::placeholder {
+    color: var(--text-muted);
+  }
+}

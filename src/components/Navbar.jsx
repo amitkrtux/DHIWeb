@@ -4,12 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 
 const navLinks = [
-  { to: '/',         label: 'Home' },
-  { to: '/about',    label: 'About' },
-  { to: '/events',   label: 'Events' },
-  { to: '/learning', label: 'Learning' },
-  { to: '/projects', label: 'Projects' },
-  { to: '/join',     label: 'Join Us' },
+  { to: '/',          label: 'Home' },
+  { to: '/about',     label: 'About' },
+  { to: '/impulse',   label: 'Impulse 2026', highlight: true },
+  { to: '/initiatives', label: 'Initiatives' },
+  { to: '/resources', label: 'Resources' },
 ]
 
 export default function Navbar() {
@@ -35,7 +34,7 @@ export default function Navbar() {
         position: 'sticky',
         top: 0,
         zIndex: 100,
-        background: scrolled ? 'rgba(10,10,15,0.85)' : 'transparent',
+        background: scrolled ? 'rgba(10,10,15,0.88)' : 'transparent',
         backdropFilter: scrolled ? 'blur(20px)' : 'none',
         borderBottom: scrolled ? '1px solid var(--bg-border)' : '1px solid transparent',
         transition: 'all 0.3s ease',
@@ -60,37 +59,58 @@ export default function Navbar() {
           >
             <span style={{ color: '#fff', fontWeight: 700, fontSize: 14 }}>D</span>
           </div>
-          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
             Design Hub <span className="text-gradient">India</span>
           </span>
         </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
-          {navLinks.map(({ to, label }) => (
-            <Link
-              key={to}
-              to={to}
-              style={{
-                padding: '0.4rem 0.875rem',
-                borderRadius: 6,
-                fontSize: '0.875rem',
-                fontWeight: isActive(to) ? 500 : 400,
-                color: isActive(to) ? 'var(--accent-light)' : 'var(--text-secondary)',
-                background: isActive(to) ? 'var(--accent-dim)' : 'transparent',
-                transition: 'all 0.2s ease',
-                textDecoration: 'none',
-              }}
-              className="hover:text-accent-400"
-            >
-              {label}
-            </Link>
+          {navLinks.map(({ to, label, highlight }) => (
+            highlight ? (
+              <Link
+                key={to}
+                to={to}
+                style={{
+                  padding: '0.4rem 0.875rem',
+                  borderRadius: 6,
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  background: isActive(to)
+                    ? 'linear-gradient(135deg,rgba(26,125,158,0.35),rgba(144,204,223,0.2))'
+                    : 'linear-gradient(135deg,rgba(26,125,158,0.18),rgba(144,204,223,0.08))',
+                  color: '#90ccdf',
+                  border: '1px solid rgba(144,204,223,0.25)',
+                  transition: 'all 0.2s ease',
+                  letterSpacing: '0.01em',
+                }}
+              >
+                ✦ {label}
+              </Link>
+            ) : (
+              <Link
+                key={to}
+                to={to}
+                style={{
+                  padding: '0.4rem 0.875rem',
+                  borderRadius: 6,
+                  fontSize: '0.875rem',
+                  fontWeight: isActive(to) ? 500 : 400,
+                  color: isActive(to) ? 'var(--accent-light)' : 'var(--text-secondary)',
+                  background: isActive(to) ? 'var(--accent-dim)' : 'transparent',
+                  transition: 'all 0.2s ease',
+                  textDecoration: 'none',
+                }}
+              >
+                {label}
+              </Link>
+            )
           ))}
         </div>
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          {/* Theme toggle */}
           <button
             onClick={toggle}
             aria-label="Toggle theme"
@@ -112,12 +132,10 @@ export default function Navbar() {
             {theme === 'dark' ? '☀️' : '🌙'}
           </button>
 
-          {/* CTA */}
           <Link to="/join" className="btn-primary hidden md:inline-flex" style={{ padding: '0.5rem 1.125rem', fontSize: '0.8125rem' }}>
             Join Community
           </Link>
 
-          {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(o => !o)}
             aria-label="Toggle menu"
@@ -155,7 +173,7 @@ export default function Navbar() {
             style={{ overflow: 'hidden', borderTop: '1px solid var(--bg-border)', background: 'var(--bg-secondary)' }}
           >
             <div className="px-6 py-4 flex flex-col gap-1">
-              {navLinks.map(({ to, label }) => (
+              {navLinks.map(({ to, label, highlight }) => (
                 <Link
                   key={to}
                   to={to}
@@ -163,12 +181,15 @@ export default function Navbar() {
                     padding: '0.625rem 0.875rem',
                     borderRadius: 8,
                     fontSize: '0.875rem',
-                    color: isActive(to) ? 'var(--accent-light)' : 'var(--text-secondary)',
-                    background: isActive(to) ? 'var(--accent-dim)' : 'transparent',
+                    color: highlight ? '#90ccdf' : isActive(to) ? 'var(--accent-light)' : 'var(--text-secondary)',
+                    background: highlight
+                      ? 'rgba(26,125,158,0.12)'
+                      : isActive(to) ? 'var(--accent-dim)' : 'transparent',
                     textDecoration: 'none',
+                    fontWeight: highlight ? 600 : 400,
                   }}
                 >
-                  {label}
+                  {highlight ? `✦ ${label}` : label}
                 </Link>
               ))}
               <Link to="/join" className="btn-primary mt-2">Join Community</Link>

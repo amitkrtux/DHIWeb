@@ -50,7 +50,7 @@ export default function ProjectDetail() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             style={{
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: "'72', sans-serif",
               fontSize: 'clamp(2rem, 5vw, 3rem)',
               fontWeight: 700,
               color: 'var(--text-primary)',
@@ -130,12 +130,12 @@ export default function ProjectDetail() {
               style={{
                 padding: '2rem',
                 borderRadius: 12,
-                border: '1px solid rgba(26,125,158,0.25)',
+                border: '1px solid rgba(26,95,255,0.25)',
                 background: 'var(--accent-dim)',
                 marginBottom: '2rem',
               }}
             >
-              <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.625rem' }}>
+              <h3 style={{ fontFamily: "'72', sans-serif", fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.625rem' }}>
                 Want to contribute?
               </h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem', marginBottom: '1.25rem' }}>

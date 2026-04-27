@@ -24,9 +24,9 @@ export default function EventCard({ event, index = 0 }) {
                 fontWeight: 500,
                 padding: '0.25rem 0.75rem',
                 borderRadius: 999,
-                background: isPast ? 'rgba(120,120,153,0.12)' : 'rgba(26,125,158,0.12)',
+                background: isPast ? 'rgba(120,120,153,0.12)' : 'rgba(26,95,255,0.12)',
                 color: isPast ? 'var(--text-muted)' : 'var(--accent-light)',
-                border: `1px solid ${isPast ? 'rgba(120,120,153,0.2)' : 'rgba(26,125,158,0.2)'}`,
+                border: `1px solid ${isPast ? 'rgba(120,120,153,0.2)' : 'rgba(26,95,255,0.2)'}`,
                 whiteSpace: 'nowrap',
               }}
             >
@@ -36,7 +36,7 @@ export default function EventCard({ event, index = 0 }) {
 
           <h3
             style={{
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: "'72', sans-serif",
               fontSize: '1.125rem',
               fontWeight: 600,
               color: 'var(--text-primary)',

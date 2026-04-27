@@ -65,7 +65,7 @@ export default function JoinVolunteer() {
             right: '10%',
             width: 400,
             height: 300,
-            background: 'radial-gradient(ellipse, rgba(26,125,158,0.1) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse, rgba(26,95,255,0.1) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -73,7 +73,7 @@ export default function JoinVolunteer() {
           <p className="section-label mb-4">Get Involved</p>
           <h1
             style={{
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: "'72', sans-serif",
               fontSize: 'clamp(2.25rem, 5vw, 3.5rem)',
               fontWeight: 700,
               color: 'var(--text-primary)',
@@ -149,7 +149,7 @@ export default function JoinVolunteer() {
                     >
                       ✓
                     </div>
-                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.5rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.75rem' }}>
+                    <h3 style={{ fontFamily: "'72', sans-serif", fontSize: '1.5rem', fontWeight: 400, color: 'var(--text-primary)', marginBottom: '0.75rem' }}>
                       Thank you, {form.name.split(' ')[0]}!
                     </h3>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem', lineHeight: 1.7, maxWidth: 380, margin: '0 auto' }}>
@@ -212,7 +212,7 @@ export default function JoinVolunteer() {
                               className="tag"
                               style={{
                                 cursor: 'pointer',
-                                background: form.interests.includes(interest) ? 'rgba(26,125,158,0.25)' : undefined,
+                                background: form.interests.includes(interest) ? 'rgba(26,95,255,0.25)' : undefined,
                                 borderColor: form.interests.includes(interest) ? 'var(--accent)' : undefined,
                                 color: form.interests.includes(interest) ? 'var(--accent-light)' : undefined,
                               }}

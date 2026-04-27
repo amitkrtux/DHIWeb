@@ -43,9 +43,9 @@ export default function EventDetail() {
                 borderRadius: 999,
                 fontSize: '0.75rem',
                 fontWeight: 500,
-                background: isPast ? 'rgba(120,120,153,0.12)' : 'rgba(26,125,158,0.12)',
+                background: isPast ? 'rgba(120,120,153,0.12)' : 'rgba(26,95,255,0.12)',
                 color: isPast ? 'var(--text-muted)' : 'var(--accent-light)',
-                border: `1px solid ${isPast ? 'rgba(120,120,153,0.2)' : 'rgba(26,125,158,0.2)'}`,
+                border: `1px solid ${isPast ? 'rgba(120,120,153,0.2)' : 'rgba(26,95,255,0.2)'}`,
               }}
             >
               {isPast ? 'Past Event' : 'Upcoming'}
@@ -57,7 +57,7 @@ export default function EventDetail() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             style={{
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: "'72', sans-serif",
               fontSize: 'clamp(2rem, 5vw, 3rem)',
               fontWeight: 700,
               color: 'var(--text-primary)',

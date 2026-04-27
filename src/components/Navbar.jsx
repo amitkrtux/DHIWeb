@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
+import Logo from './Logo'
 
 const navLinks = [
   { to: '/',          label: 'Home' },
@@ -43,23 +44,8 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group" aria-label="Design Hub India Home">
-          <div
-            style={{
-              width: 32,
-              height: 32,
-              background: 'var(--accent)',
-              borderRadius: 8,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 0 16px rgba(26,125,158,0.4)',
-              transition: 'box-shadow 0.3s ease',
-            }}
-            className="group-hover:shadow-glow"
-          >
-            <span style={{ color: '#fff', fontWeight: 700, fontSize: 14 }}>D</span>
-          </div>
-          <span style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+          <Logo size={34} style={{ display: 'block', transition: 'opacity 0.2s' }} />
+          <span style={{ fontFamily: "'72', sans-serif", fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
             Design Hub <span className="text-gradient">India</span>
           </span>
         </Link>
@@ -67,45 +53,24 @@ export default function Navbar() {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map(({ to, label, highlight }) => (
-            highlight ? (
-              <Link
-                key={to}
-                to={to}
-                style={{
-                  padding: '0.4rem 0.875rem',
-                  borderRadius: 6,
-                  fontSize: '0.875rem',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  background: isActive(to)
-                    ? 'linear-gradient(135deg,rgba(26,125,158,0.35),rgba(144,204,223,0.2))'
-                    : 'linear-gradient(135deg,rgba(26,125,158,0.18),rgba(144,204,223,0.08))',
-                  color: '#90ccdf',
-                  border: '1px solid rgba(144,204,223,0.25)',
-                  transition: 'all 0.2s ease',
-                  letterSpacing: '0.01em',
-                }}
-              >
-                ✦ {label}
-              </Link>
-            ) : (
-              <Link
-                key={to}
-                to={to}
-                style={{
-                  padding: '0.4rem 0.875rem',
-                  borderRadius: 6,
-                  fontSize: '0.875rem',
-                  fontWeight: isActive(to) ? 500 : 400,
-                  color: isActive(to) ? 'var(--accent-light)' : 'var(--text-secondary)',
-                  background: isActive(to) ? 'var(--accent-dim)' : 'transparent',
-                  transition: 'all 0.2s ease',
-                  textDecoration: 'none',
-                }}
-              >
-                {label}
-              </Link>
-            )
+            <Link
+              key={to}
+              to={to}
+              style={{
+                padding: '0.4rem 0.875rem',
+                borderRadius: 6,
+                fontSize: '0.875rem',
+                fontWeight: isActive(to) ? 500 : 400,
+                color: highlight
+                  ? (isActive(to) ? '#ff8fa3' : '#FF5C77')
+                  : isActive(to) ? 'var(--accent-light)' : 'var(--text-secondary)',
+                background: isActive(to) ? (highlight ? 'rgba(255,92,119,0.08)' : 'var(--accent-dim)') : 'transparent',
+                transition: 'all 0.2s ease',
+                textDecoration: 'none',
+              }}
+            >
+              {highlight ? `✦ ${label}` : label}
+            </Link>
           ))}
         </div>
 
@@ -181,9 +146,9 @@ export default function Navbar() {
                     padding: '0.625rem 0.875rem',
                     borderRadius: 8,
                     fontSize: '0.875rem',
-                    color: highlight ? '#90ccdf' : isActive(to) ? 'var(--accent-light)' : 'var(--text-secondary)',
+                    color: highlight ? '#7bb3ff' : isActive(to) ? 'var(--accent-light)' : 'var(--text-secondary)',
                     background: highlight
-                      ? 'rgba(26,125,158,0.12)'
+                      ? 'rgba(26,95,255,0.12)'
                       : isActive(to) ? 'var(--accent-dim)' : 'transparent',
                     textDecoration: 'none',
                     fontWeight: highlight ? 600 : 400,

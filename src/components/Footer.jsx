@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Logo from './Logo'
 
 const footerLinks = {
   Community: [
@@ -24,15 +25,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link to="/" className="inline-flex items-center gap-3 mb-4">
-              <div style={{ width: 32, height: 32, background: 'var(--accent)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 12px rgba(26,125,158,0.3)' }}>
-                <span style={{ color: '#fff', fontWeight: 700, fontSize: 14 }}>D</span>
-              </div>
-              <span style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)' }}>
+              <Logo size={34} />
+              <span style={{ fontFamily: "'72', sans-serif", fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)' }}>
                 Design Hub <span className="text-gradient">India</span>
               </span>
             </Link>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', lineHeight: 1.7, maxWidth: 320, marginBottom: '1.5rem' }}>
-              The Beating Heart of Global SAP Design — connecting 200+ designers across India to learn, collaborate, and celebrate design.
+              The Beating Heart of SAP Design — connecting 200+ designers across India to learn, collaborate, and celebrate design.
             </p>
             <div className="flex gap-3 flex-wrap">
               <a href="mailto:uxdesignindia@global.corp.sap" style={{ padding: '0.375rem 0.875rem', borderRadius: 6, border: '1px solid var(--bg-border)', color: 'var(--text-muted)', fontSize: '0.75rem', textDecoration: 'none', transition: 'all 0.2s ease' }}>

@@ -45,10 +45,10 @@ export default function Resources() {
   return (
     <PageTransition>
       <section className="grid-bg relative" style={{ padding: '8rem 0 4rem' }}>
-        <div style={{ position: 'absolute', top: '20%', right: '8%', width: 400, height: 300, background: 'radial-gradient(ellipse, rgba(26,125,158,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '20%', right: '8%', width: 400, height: 300, background: 'radial-gradient(ellipse, rgba(26,95,255,0.08) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-4">From Designers, For Designers</p>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', fontWeight: 700, color: 'var(--text-primary)', maxWidth: 640, marginBottom: '1rem', lineHeight: 1.2 }}>
+          <h1 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(2.25rem, 5vw, 3.5rem)', fontWeight: 200, color: 'var(--text-primary)', maxWidth: 640, marginBottom: '1rem', lineHeight: 1.2 }}>
             Learning <span className="text-gradient">Resources</span>
           </h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: 520, lineHeight: 1.7 }}>
@@ -89,9 +89,9 @@ export default function Resources() {
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2 mb-6">
-            <button onClick={() => setActiveTag(null)} className="tag" style={{ cursor: 'pointer', background: !activeTag ? 'rgba(26,125,158,0.25)' : undefined, borderColor: !activeTag ? 'var(--accent)' : undefined }}>All Topics</button>
+            <button onClick={() => setActiveTag(null)} className="tag" style={{ cursor: 'pointer', background: !activeTag ? 'rgba(26,95,255,0.25)' : undefined, borderColor: !activeTag ? 'var(--accent)' : undefined }}>All Topics</button>
             {allTags.map(tag => (
-              <button key={tag} onClick={() => setActiveTag(t => t === tag ? null : tag)} className="tag" style={{ cursor: 'pointer', background: activeTag === tag ? 'rgba(26,125,158,0.25)' : undefined, borderColor: activeTag === tag ? 'var(--accent)' : undefined }}>{tag}</button>
+              <button key={tag} onClick={() => setActiveTag(t => t === tag ? null : tag)} className="tag" style={{ cursor: 'pointer', background: activeTag === tag ? 'rgba(26,95,255,0.25)' : undefined, borderColor: activeTag === tag ? 'var(--accent)' : undefined }}>{tag}</button>
             ))}
           </div>
 
@@ -130,11 +130,11 @@ export default function Resources() {
                       <span className="tag">{r.type}</span>
                       <span style={{ fontSize: '0.75rem', fontWeight: 500, padding: '0.2rem 0.7rem', borderRadius: 999, background: level.bg, color: level.color, border: `1px solid ${level.border}` }}>{r.level}</span>
                       {r.contributed && (
-                        <span style={{ fontSize: '0.65rem', fontWeight: 600, padding: '0.2rem 0.6rem', borderRadius: 999, background: 'var(--accent-dim)', color: 'var(--accent-light)', border: '1px solid rgba(26,125,158,0.2)' }}>Community</span>
+                        <span style={{ fontSize: '0.65rem', fontWeight: 600, padding: '0.2rem 0.6rem', borderRadius: 999, background: 'var(--accent-dim)', color: 'var(--accent-light)', border: '1px solid rgba(26,95,255,0.2)' }}>Community</span>
                       )}
                     </div>
 
-                    <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.0625rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.625rem', lineHeight: 1.4, flex: 'none' }}>{r.title}</h3>
+                    <h3 style={{ fontFamily: "'72', sans-serif", fontSize: '1.0625rem', fontWeight: 400, color: 'var(--text-primary)', marginBottom: '0.625rem', lineHeight: 1.4, flex: 'none' }}>{r.title}</h3>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', lineHeight: 1.7, flex: 1, marginBottom: '1.25rem' }}>{r.excerpt}</p>
 
                     <div className="flex gap-2 flex-wrap mb-3">
@@ -160,9 +160,9 @@ export default function Resources() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            style={{ marginTop: '4rem', padding: '2rem', borderRadius: 16, border: '1px solid rgba(26,125,158,0.25)', background: 'linear-gradient(135deg, rgba(26,125,158,0.08), transparent)', textAlign: 'center' }}
+            style={{ marginTop: '4rem', padding: '2rem', borderRadius: 16, border: '1px solid rgba(26,95,255,0.25)', background: 'linear-gradient(135deg, rgba(26,95,255,0.08), transparent)', textAlign: 'center' }}
           >
-            <p style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.375rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.625rem' }}>
+            <p style={{ fontFamily: "'72', sans-serif", fontSize: '1.375rem', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '0.625rem' }}>
               Have something to share?
             </p>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', maxWidth: 420, margin: '0 auto 1.5rem', lineHeight: 1.7 }}>

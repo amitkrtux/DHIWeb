@@ -4,9 +4,9 @@ export default function SectionHeader({ label, title, subtitle, center = false }
       {label && <p className="section-label mb-3">{label}</p>}
       <h2
         style={{
-          fontFamily: 'Playfair Display, serif',
+          fontFamily: "'72', sans-serif",
           fontSize: 'clamp(1.75rem, 4vw, 2.5rem)',
-          fontWeight: 700,
+          fontWeight: 300,
           color: 'var(--text-primary)',
           lineHeight: 1.2,
           marginBottom: subtitle ? '1rem' : 0,

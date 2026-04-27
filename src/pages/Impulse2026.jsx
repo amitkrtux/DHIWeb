@@ -34,15 +34,15 @@ function Countdown() {
             textAlign: 'center',
             padding: '1rem 1.25rem',
             borderRadius: 12,
-            border: '1px solid rgba(144,204,223,0.25)',
-            background: 'rgba(144,204,223,0.06)',
+            border: '1px solid rgba(77,124,255,0.25)',
+            background: 'rgba(26,95,255,0.06)',
             minWidth: 70,
           }}
         >
-          <p style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontWeight: 700, color: '#90ccdf', lineHeight: 1, letterSpacing: '-0.02em' }}>
+          <p style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontWeight: 200, color: '#7bb3ff', lineHeight: 1, letterSpacing: '-0.02em' }}>
             {String(value).padStart(2, '0')}
           </p>
-          <p style={{ fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(144,204,223,0.6)', marginTop: '0.375rem' }}>{label}</p>
+          <p style={{ fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(77,124,255,0.6)', marginTop: '0.375rem' }}>{label}</p>
         </div>
       ))}
     </div>
@@ -63,8 +63,8 @@ function SparkField({ count = 40 }) {
         <span key={s.id} style={{
           position: 'absolute', left: `${s.left}%`, top: `${s.top}%`,
           width: s.size, height: s.size, borderRadius: '50%',
-          background: '#90ccdf',
-          boxShadow: `0 0 ${s.size * 3}px ${s.size}px rgba(144,204,223,0.65)`,
+          background: '#7bb3ff',
+          boxShadow: `0 0 ${s.size * 3}px ${s.size}px rgba(77,124,255,0.65)`,
           animation: `sparkImpulse ${s.duration}s ${s.delay}s ease-in-out infinite alternate`,
           opacity: 0,
         }} />
@@ -121,47 +121,47 @@ export default function Impulse2026() {
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
-          background: 'linear-gradient(180deg, #040608 0%, #07101a 50%, #040608 100%)',
+          background: 'linear-gradient(180deg, #030408 0%, #060d1c 50%, #030408 100%)',
         }}
       >
         {/* Grid */}
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(26,125,158,0.05) 1px, transparent 1px), linear-gradient(90deg,rgba(26,125,158,0.05) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(26,95,255,0.05) 1px, transparent 1px), linear-gradient(90deg,rgba(26,95,255,0.05) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
         {/* Center glow */}
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '120%', height: '120%', background: 'radial-gradient(ellipse 60% 50%, rgba(26,125,158,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '120%', height: '120%', background: 'radial-gradient(ellipse 60% 50%, rgba(26,95,255,0.14) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
         <SparkField />
 
         <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 1.5rem', maxWidth: 800, margin: '0 auto' }}>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.375rem 1rem', borderRadius: 999, background: 'rgba(144,204,223,0.1)', border: '1px solid rgba(144,204,223,0.3)', marginBottom: '2rem' }}>
-              <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#90ccdf', boxShadow: '0 0 10px #90ccdf', display: 'inline-block', animation: 'pulse 2s ease-in-out infinite' }} />
-              <span style={{ color: '#90ccdf', fontSize: '0.8125rem', fontWeight: 600, letterSpacing: '0.08em' }}>The most celebrated design festival is BACK</span>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.375rem 1rem', borderRadius: 999, background: 'rgba(77,124,255,0.1)', border: '1px solid rgba(77,124,255,0.3)', marginBottom: '2rem' }}>
+              <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#7bb3ff', boxShadow: '0 0 10px #7bb3ff', display: 'inline-block', animation: 'pulse 2s ease-in-out infinite' }} />
+              <span style={{ color: '#7bb3ff', fontSize: '0.8125rem', fontWeight: 600, letterSpacing: '0.08em' }}>The most celebrated design festival is BACK</span>
             </div>
 
             <h1
               style={{
-                fontFamily: 'Playfair Display, serif',
+                fontFamily: "'72', sans-serif",
                 fontSize: 'clamp(3.5rem, 12vw, 9rem)',
-                fontWeight: 700,
+                fontWeight: 200,
                 color: '#ffffff',
                 lineHeight: 0.95,
-                letterSpacing: '-0.04em',
+                letterSpacing: '-0.025em',
                 marginBottom: '0.25rem',
-                textShadow: '0 0 60px rgba(144,204,223,0.3)',
+                textShadow: '0 0 60px rgba(77,124,255,0.3)',
               }}
             >
               IMPULSE
             </h1>
             <h1
               style={{
-                fontFamily: 'Playfair Display, serif',
+                fontFamily: "'72', sans-serif",
                 fontSize: 'clamp(3.5rem, 12vw, 9rem)',
-                fontWeight: 700,
+                fontWeight: 200,
                 lineHeight: 0.95,
-                letterSpacing: '-0.04em',
+                letterSpacing: '-0.025em',
                 marginBottom: '2rem',
-                background: 'linear-gradient(90deg, #90ccdf 0%, #ffffff 50%, #2a96b8 100%)',
+                background: 'linear-gradient(90deg, #7bb3ff 0%, #ffffff 50%, #a78bfa 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -171,15 +171,15 @@ export default function Impulse2026() {
             </h1>
 
             <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.375rem)', color: 'rgba(255,255,255,0.5)', fontStyle: 'italic', marginBottom: '2.5rem', letterSpacing: '0.04em' }}>
-              Theme: <span style={{ color: '#90ccdf', fontStyle: 'normal', fontWeight: 700 }}>Human Spark</span>
+              Theme: <span style={{ color: '#7bb3ff', fontStyle: 'normal', fontWeight: 600 }}>Human Spark</span>
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', borderRadius: 12, border: '1px solid rgba(144,204,223,0.25)', background: 'rgba(144,204,223,0.06)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', borderRadius: 12, border: '1px solid rgba(77,124,255,0.25)', background: 'rgba(26,95,255,0.06)' }}>
                 <span style={{ fontSize: '1.5rem' }}>📅</span>
                 <div style={{ textAlign: 'left' }}>
                   <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.2rem' }}>Save the Date</p>
-                  <p style={{ color: '#ffffff', fontSize: '1.25rem', fontWeight: 700, fontFamily: 'Playfair Display, serif' }}>29 September 2026</p>
+                  <p style={{ color: '#ffffff', fontSize: '1.25rem', fontWeight: 400, fontFamily: "'72', sans-serif" }}>29 September 2026</p>
                 </div>
               </div>
               <Countdown />
@@ -190,8 +190,8 @@ export default function Impulse2026() {
                 href="#participation"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8, padding: '0.75rem 2rem', borderRadius: 8,
-                  background: 'rgba(26,125,158,0.3)', border: '1px solid rgba(144,204,223,0.45)',
-                  color: '#90ccdf', fontSize: '0.9375rem', fontWeight: 600, textDecoration: 'none', transition: 'all 0.2s',
+                  background: 'rgba(26,95,255,0.25)', border: '1px solid rgba(77,124,255,0.45)',
+                  color: '#7bb3ff', fontSize: '0.9375rem', fontWeight: 600, textDecoration: 'none', transition: 'all 0.2s',
                 }}
               >
                 Call for Participation
@@ -221,7 +221,7 @@ export default function Impulse2026() {
       <section style={{ padding: '6rem 0', background: 'var(--bg-secondary)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-3">6 Reasons</p>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>
             Why you should <span className="text-gradient">join Impulse</span>
           </h2>
 
@@ -238,7 +238,7 @@ export default function Impulse2026() {
                 style={{ padding: '1.75rem' }}
               >
                 <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{r.icon}</div>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.125rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.625rem' }}>{r.title}</h3>
+                <h3 style={{ fontFamily: "'72', sans-serif", fontSize: '1.125rem', fontWeight: 400, color: 'var(--text-primary)', marginBottom: '0.625rem' }}>{r.title}</h3>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', lineHeight: 1.7 }}>{r.body}</p>
               </motion.div>
             ))}
@@ -257,7 +257,7 @@ export default function Impulse2026() {
                 style={{ padding: '1.75rem' }}
               >
                 <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{reasons[slide].icon}</div>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.625rem' }}>{reasons[slide].title}</h3>
+                <h3 style={{ fontFamily: "'72', sans-serif", fontSize: '1.25rem', fontWeight: 400, color: 'var(--text-primary)', marginBottom: '0.625rem' }}>{reasons[slide].title}</h3>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem', lineHeight: 1.7 }}>{reasons[slide].body}</p>
               </motion.div>
             </AnimatePresence>
@@ -289,7 +289,7 @@ export default function Impulse2026() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <p className="section-label mb-4">Relive the Magic</p>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1.25rem', lineHeight: 1.2 }}>
+              <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '1.25rem', lineHeight: 1.2 }}>
                 Watch the <span className="text-gradient">Impulse 2025 Film</span>
               </h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2rem' }}>
@@ -321,22 +321,22 @@ export default function Impulse2026() {
                   cursor: 'pointer',
                 }}
               >
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #040608 0%, #07101a 100%)' }} />
-                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(26,125,158,0.06) 1px, transparent 1px), linear-gradient(90deg,rgba(26,125,158,0.06) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #030408 0%, #060d1c 100%)' }} />
+                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(26,95,255,0.05) 1px, transparent 1px), linear-gradient(90deg,rgba(26,95,255,0.05) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
                 <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
                   <div
                     style={{
                       width: 72,
                       height: 72,
                       borderRadius: '50%',
-                      background: 'rgba(26,125,158,0.3)',
-                      border: '2px solid rgba(144,204,223,0.5)',
+                      background: 'rgba(26,95,255,0.25)',
+                      border: '2px solid rgba(77,124,255,0.5)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       margin: '0 auto 1rem',
                       fontSize: '1.75rem',
-                      color: '#90ccdf',
+                      color: '#7bb3ff',
                       transition: 'all 0.2s',
                     }}
                   >
@@ -355,7 +355,7 @@ export default function Impulse2026() {
       <section style={{ padding: '6rem 0', background: 'var(--bg-secondary)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-3">Voices from 2025</p>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>
+          <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>
             What people loved about <span className="text-gradient">Impulse 2025</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -390,7 +390,7 @@ export default function Impulse2026() {
 
       {/* Theme — Human Spark */}
       <section style={{ padding: '6rem 0', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 800, height: 400, background: 'radial-gradient(ellipse, rgba(26,125,158,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 800, height: 400, background: 'radial-gradient(ellipse, rgba(26,95,255,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -398,8 +398,8 @@ export default function Impulse2026() {
                 style={{
                   aspectRatio: '4/3',
                   borderRadius: 16,
-                  border: '1px solid rgba(144,204,223,0.2)',
-                  background: 'linear-gradient(135deg, #040608 0%, #07101a 100%)',
+                  border: '1px solid rgba(77,124,255,0.2)',
+                  background: 'linear-gradient(135deg, #030408 0%, #060d1c 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -407,18 +407,18 @@ export default function Impulse2026() {
                   overflow: 'hidden',
                 }}
               >
-                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(26,125,158,0.05) 1px, transparent 1px), linear-gradient(90deg,rgba(26,125,158,0.05) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(26,95,255,0.04) 1px, transparent 1px), linear-gradient(90deg,rgba(26,95,255,0.04) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
                 <SparkField count={20} />
                 <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-                  <p style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 700, color: '#ffffff', lineHeight: 1, letterSpacing: '-0.03em', marginBottom: '0.5rem', textShadow: '0 0 40px rgba(144,204,223,0.4)' }}>Human</p>
-                  <p style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 700, lineHeight: 1, letterSpacing: '-0.03em', background: 'linear-gradient(90deg, #90ccdf, #2a96b8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Spark</p>
+                  <p style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 200, color: '#ffffff', lineHeight: 1, letterSpacing: '-0.02em', marginBottom: '0.5rem', textShadow: '0 0 40px rgba(77,124,255,0.4)' }}>Human</p>
+                  <p style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 200, lineHeight: 1, letterSpacing: '-0.02em', background: 'linear-gradient(90deg, #7bb3ff, #a78bfa)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Spark</p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}>
               <p className="section-label mb-4">Impulse 2026 Theme</p>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1.25rem', lineHeight: 1.2 }}>
+              <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '1.25rem', lineHeight: 1.2 }}>
                 <span className="text-gradient">Human Spark</span>
               </h2>
               <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '1.25rem' }}>
@@ -463,9 +463,9 @@ export default function Impulse2026() {
 
             <h2
               style={{
-                fontFamily: 'Playfair Display, serif',
+                fontFamily: "'72', sans-serif",
                 fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-                fontWeight: 700,
+                fontWeight: 300,
                 color: 'var(--text-primary)',
                 lineHeight: 1.2,
                 marginBottom: '1.25rem',

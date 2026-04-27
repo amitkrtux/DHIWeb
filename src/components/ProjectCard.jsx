@@ -29,7 +29,7 @@ export default function ProjectCard({ project, index = 0 }) {
 
           <h3
             style={{
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: "'72', sans-serif",
               fontSize: '1.125rem',
               fontWeight: 600,
               color: 'var(--text-primary)',

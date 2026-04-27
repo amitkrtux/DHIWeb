@@ -18,7 +18,7 @@ export default function Projects() {
             left: '15%',
             width: 500,
             height: 400,
-            background: 'radial-gradient(ellipse, rgba(26,125,158,0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse, rgba(26,95,255,0.08) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -26,7 +26,7 @@ export default function Projects() {
           <p className="section-label mb-4">Community Work</p>
           <h1
             style={{
-              fontFamily: 'Playfair Display, serif',
+              fontFamily: "'72', sans-serif",
               fontSize: 'clamp(2.25rem, 5vw, 3.5rem)',
               fontWeight: 700,
               color: 'var(--text-primary)',

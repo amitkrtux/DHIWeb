@@ -38,12 +38,12 @@ export default function About() {
     <PageTransition>
       {/* Hero */}
       <section className="relative grid-bg overflow-hidden" style={{ padding: '8rem 0 6rem' }}>
-        <div style={{ position: 'absolute', top: '10%', right: '5%', width: 500, height: 400, background: 'radial-gradient(ellipse, rgba(26,125,158,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '10%', right: '5%', width: 500, height: 400, background: 'radial-gradient(ellipse, rgba(26,95,255,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}>
               <p className="section-label mb-4">About the Hub</p>
-              <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 700, lineHeight: 1.1, color: 'var(--text-primary)', marginBottom: '1.5rem', letterSpacing: '-0.025em' }}>
+              <h1 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', fontWeight: 200, lineHeight: 1.1, color: 'var(--text-primary)', marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
                 The <span className="text-gradient">Beating Heart</span>
                 <br />of Global SAP Design
               </h1>
@@ -63,7 +63,7 @@ export default function About() {
                   key={s.label}
                   style={{ padding: '1.5rem', borderRadius: 12, border: '1px solid var(--bg-border)', background: 'var(--bg-card)', textAlign: 'center' }}
                 >
-                  <p style={{ fontFamily: 'Playfair Display, serif', fontSize: '2.25rem', fontWeight: 700, color: 'var(--accent-light)', lineHeight: 1, letterSpacing: '-0.02em', marginBottom: '0.25rem' }}>{s.value}</p>
+                  <p style={{ fontFamily: "'72', sans-serif", fontSize: '2.25rem', fontWeight: 300, color: 'var(--accent-light)', lineHeight: 1, letterSpacing: '-0.02em', marginBottom: '0.25rem' }}>{s.value}</p>
                   <p style={{ fontWeight: 600, fontSize: '0.8125rem', color: 'var(--text-primary)', marginBottom: '0.2rem' }}>{s.label}</p>
                   <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{s.sub}</p>
                 </div>
@@ -82,7 +82,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.375rem, 3.5vw, 2.25rem)', fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.4, fontStyle: 'italic', marginBottom: '1.5rem' }}>
+            <p style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.375rem, 3.5vw, 2.25rem)', fontWeight: 300, color: 'var(--text-primary)', lineHeight: 1.4, fontStyle: 'italic', marginBottom: '1.5rem' }}>
               "To nurture a culture of collaboration and curiosity — to make every designer feel seen, supported, and celebrated."
             </p>
             <p style={{ color: 'var(--accent-light)', fontSize: '0.875rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' }}>Vision 2026</p>
@@ -94,7 +94,7 @@ export default function About() {
       <section style={{ padding: '6rem 0' }}>
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-3">The People Behind It</p>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>Our Core Team</h2>
+          <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>Our Core Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {team.map((member, i) => (
               <motion.div
@@ -111,8 +111,8 @@ export default function About() {
                       width: 48,
                       height: 48,
                       borderRadius: 12,
-                      background: 'linear-gradient(135deg, var(--accent-dim), rgba(144,204,223,0.1))',
-                      border: '1px solid rgba(26,125,158,0.25)',
+                      background: 'linear-gradient(135deg, var(--accent-dim), rgba(77,124,255,0.08))',
+                      border: '1px solid rgba(26,95,255,0.2)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -140,7 +140,7 @@ export default function About() {
       <section style={{ padding: '6rem 0', background: 'var(--bg-secondary)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-3">What We Stand For</p>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>Our Values</h2>
+          <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {values.map((v, i) => (
               <motion.div
@@ -154,7 +154,7 @@ export default function About() {
               >
                 <div style={{ fontSize: '1.5rem', color: 'var(--accent-light)', flexShrink: 0, marginTop: '0.15rem' }}>{v.icon}</div>
                 <div>
-                  <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.25rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>{v.title}</h3>
+                  <h3 style={{ fontFamily: "'72', sans-serif", fontSize: '1.25rem', fontWeight: 400, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>{v.title}</h3>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.9375rem', lineHeight: 1.7 }}>{v.body}</p>
                 </div>
               </motion.div>
@@ -167,7 +167,7 @@ export default function About() {
       <section style={{ padding: '6rem 0' }}>
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-3">Our Journey</p>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>Milestones</h2>
+          <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '3rem', lineHeight: 1.2 }}>Milestones</h2>
           <div style={{ position: 'relative' }}>
             <div style={{ position: 'absolute', left: 'clamp(1.5rem,3vw,2.5rem)', top: 0, bottom: 0, width: 1, background: 'linear-gradient(to bottom, var(--accent), transparent)' }} />
             <div className="flex flex-col gap-8">
@@ -185,16 +185,16 @@ export default function About() {
                       width: 12,
                       height: 12,
                       borderRadius: '50%',
-                      background: m.year === '2026' ? '#90ccdf' : 'var(--accent)',
-                      border: `2px solid ${m.year === '2026' ? '#90ccdf' : 'var(--accent-light)'}`,
-                      boxShadow: m.year === '2026' ? '0 0 12px rgba(144,204,223,0.5)' : '0 0 8px rgba(26,125,158,0.4)',
+                      background: m.year === '2026' ? '#7bb3ff' : 'var(--accent)',
+                      border: `2px solid ${m.year === '2026' ? '#7bb3ff' : 'var(--accent-light)'}`,
+                      boxShadow: m.year === '2026' ? '0 0 12px rgba(77,124,255,0.5)' : '0 0 8px rgba(26,95,255,0.4)',
                       flexShrink: 0,
                       marginTop: '0.375rem',
                       marginLeft: '-0.375rem',
                     }}
                   />
                   <div style={{ paddingBottom: i < milestones.length - 1 ? '1rem' : 0 }}>
-                    <p style={{ fontSize: '0.75rem', fontWeight: 700, color: m.year === '2026' ? '#90ccdf' : 'var(--accent-light)', letterSpacing: '0.08em', marginBottom: '0.25rem' }}>{m.year}</p>
+                    <p style={{ fontSize: '0.75rem', fontWeight: 700, color: m.year === '2026' ? '#7bb3ff' : 'var(--accent-light)', letterSpacing: '0.08em', marginBottom: '0.25rem' }}>{m.year}</p>
                     <p style={{ fontWeight: 600, fontSize: '1.0625rem', color: 'var(--text-primary)', marginBottom: '0.25rem' }}>{m.event}</p>
                     <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>{m.detail}</p>
                   </div>
@@ -209,7 +209,7 @@ export default function About() {
       <section style={{ padding: '6rem 0', background: 'var(--bg-secondary)', borderTop: '1px solid var(--bg-border)' }}>
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-3">Who Belongs Here</p>
-          <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.75rem', lineHeight: 1.2 }}>Who Should Join</h2>
+          <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 300, color: 'var(--text-primary)', marginBottom: '0.75rem', lineHeight: 1.2 }}>Who Should Join</h2>
           <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: 480, marginBottom: '3rem', lineHeight: 1.7 }}>If you work at SAP India and care about design — this community is for you.</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
             {whoJoins.map((w, i) => (

@@ -6,7 +6,7 @@ import SectionHeader from '../components/SectionHeader'
 
 // Photo placeholders — styled slides representing real event moments
 const heroSlides = [
-  { title: 'Impulse 2025', subtitle: '"Echoes of Tomorrow" — 500+ designers', color1: '#060c14', color2: '#091525', accent: 'rgba(26,125,158,0.4)' },
+  { title: 'Impulse 2025', subtitle: '"Echoes of Tomorrow" — 500+ designers', color1: '#060c14', color2: '#091525', accent: 'rgba(26,95,255,0.4)' },
   { title: 'Let\'s Talk Arin', subtitle: 'Fireside with SAP Chief Design Officer', color1: '#0c0608', color2: '#180c10', accent: 'rgba(158,26,80,0.35)' },
   { title: 'NID Experience Day', subtitle: 'Academia × Enterprise Design Collab', color1: '#080c06', color2: '#121a08', accent: 'rgba(74,158,26,0.3)' },
   { title: 'AI for Designers', subtitle: 'Workshop Series — Hands-on AI Tools', color1: '#060808', color2: '#0a1212', accent: 'rgba(26,140,158,0.4)' },
@@ -96,7 +96,7 @@ export default function Initiatives() {
             {/* Radial glow */}
             <div style={{ position: 'absolute', top: '50%', left: '40%', transform: 'translate(-50%,-50%)', width: 600, height: 400, background: `radial-gradient(ellipse, ${slide.accent} 0%, transparent 65%)` }} />
             {/* Slide number decoration */}
-            <div style={{ position: 'absolute', right: '4%', bottom: '8%', fontFamily: 'Playfair Display, serif', fontSize: 'clamp(6rem,18vw,12rem)', fontWeight: 700, color: 'rgba(255,255,255,0.04)', lineHeight: 1, userSelect: 'none', letterSpacing: '-0.04em' }}>
+            <div style={{ position: 'absolute', right: '4%', bottom: '8%', fontFamily: "'72', sans-serif", fontSize: 'clamp(6rem,18vw,12rem)', fontWeight: 700, color: 'rgba(255,255,255,0.04)', lineHeight: 1, userSelect: 'none', letterSpacing: '-0.04em' }}>
               0{current + 1}
             </div>
           </motion.div>
@@ -109,7 +109,7 @@ export default function Initiatives() {
           <div className="max-w-7xl mx-auto w-full px-6">
             <motion.div key={`text-${current}`} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
               <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8125rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Community Highlight</p>
-              <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(1.75rem, 5vw, 3.5rem)', fontWeight: 700, color: '#ffffff', lineHeight: 1.1, marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
+              <h2 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(1.75rem, 5vw, 3.5rem)', fontWeight: 200, color: '#ffffff', lineHeight: 1.1, marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>
                 {slide.title}
               </h2>
               <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: '1rem' }}>{slide.subtitle}</p>
@@ -127,7 +127,7 @@ export default function Initiatives() {
                 width: i === current ? 24 : 6,
                 height: 6,
                 borderRadius: 999,
-                background: i === current ? '#90ccdf' : 'rgba(255,255,255,0.3)',
+                background: i === current ? '#7bb3ff' : 'rgba(255,255,255,0.3)',
                 border: 'none',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
@@ -142,7 +142,7 @@ export default function Initiatives() {
       <section style={{ padding: '4rem 0 2rem' }}>
         <div className="max-w-7xl mx-auto px-6">
           <p className="section-label mb-3">Community Driven</p>
-          <h1 style={{ fontFamily: 'Playfair Display, serif', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: 1.2 }}>
+          <h1 style={{ fontFamily: "'72', sans-serif", fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 200, color: 'var(--text-primary)', marginBottom: '1rem', lineHeight: 1.2 }}>
             Open <span className="text-gradient">Initiatives</span>
           </h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '1rem', maxWidth: 560, lineHeight: 1.7 }}>
@@ -170,7 +170,7 @@ export default function Initiatives() {
                   <span style={{ color: 'var(--text-muted)', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase' }}>Open Initiative</span>
                 </div>
 
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.1875rem', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.75rem', lineHeight: 1.3 }}>
+                <h3 style={{ fontFamily: "'72', sans-serif", fontSize: '1.1875rem', fontWeight: 400, color: 'var(--text-primary)', marginBottom: '0.75rem', lineHeight: 1.3 }}>
                   {init.title}
                 </h3>
 
